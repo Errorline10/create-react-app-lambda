@@ -1,12 +1,65 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import NavBar from './parts/navbar';
+import {
+  HashRouter,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
+import Home from './pages/home'
+import CreateAccount from './pages/createaccount'
+import Deposit from './pages/deposit'
+import Withdraw from './pages/withdraw'
+import AllData from './pages/alldata'
+
+import { MyProvider } from './context/myContext'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  return (
+    <HashRouter>
+      <NavBar />
+      <MyProvider value={
+        {
+          currentActive: 0,
+          users: [
+            {
+              name: 'BankVault',
+              email: 'mboston30@gmail.com',
+              password: 'secret',
+              transactions: [
+                { deposit: 100 }
+              ]
+            }
+          ]
+
+        }
+      }>
+        <div className="container" style={{ padding: "20px" }}>
+          <Routes>
+            <Route path="/" exact element={Home} />
+            <Route path="/CreateAccount/" element={<CreateAccount />} />
+            <Route path="/deposit/" element={<Deposit />} />
+            <Route path="/withdraw/" element={<Withdraw />} />
+            <Route path="/alldata/" element={<AllData />} />
+          </Routes>
+        </div>
+      </MyProvider>
+    </HashRouter>
+  );
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
