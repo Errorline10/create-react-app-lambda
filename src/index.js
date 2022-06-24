@@ -17,7 +17,7 @@ import AllData from './pages/alldata'
 
 import { MyProvider } from './context/myContext'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './bootstrap.min.css';
 import './index.css';
 
 function App() {
