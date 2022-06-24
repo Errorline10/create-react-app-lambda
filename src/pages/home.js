@@ -13,6 +13,7 @@ function Home() {
           <img
             src="/images/bank-icon.jpg"
             className="img-fluid"
+            alt="Bank Icon"
           />
         )}
     />
