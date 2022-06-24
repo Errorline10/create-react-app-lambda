@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import NavBar from './parts/navbar';
 import {
   HashRouter,
-  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";

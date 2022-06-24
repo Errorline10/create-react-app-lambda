@@ -8,7 +8,13 @@ function Home() {
       header="BadBank Home Page"
       title="Welcome to the bad bank"
       text="this bank has no security, and will probably not store any money."
-      body={(<img src="/images/bank-icon.jpg" className="img-fluid" alt="Responsive image" />)}
+      body={
+        (
+          <img
+            src="/images/bank-icon.jpg"
+            className="img-fluid"
+          />
+        )}
     />
   );
 }

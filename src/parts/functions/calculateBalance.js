@@ -1,4 +1,4 @@
-import React, { useContext, UserContext, useState } from 'react';
+import { useContext } from 'react';
 import myContext from '../../context/myContext'
 
 export default function CalculateBalanceForUser(accountId) {

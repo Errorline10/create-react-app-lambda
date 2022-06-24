@@ -1,12 +1,13 @@
 import React, {useState, useContext} from 'react';
 import { Card, Button } from 'react-bootstrap';
-import styles from './bootstrapCard.css'
+import './bootstrapCard.css'
 import AccountSelector from '../parts/accountSelector'
 import myContext from '../context/myContext';
 
 
 export function BootstrapCard(props) {
   const ctx = useContext(myContext);
+  // eslint-disable-next-line
   const [currentUser, setCurrentUser] = useState(ctx.currentActive);
 
   function setCurrentUserWrapper(user){
@@ -60,17 +61,3 @@ export function BootstrapCard(props) {
 
   );
 }
-
-
-
-{/* <div className={classes()} style={{ maxWidth: "18rem", margin: "auto auto" }}>
-<div className="card-header">{props.header}</div>
-<div className="card-body" style={{ textAlign: "left"}}>
-  {props.title && (<h5 className="card-title">{props.title}</h5>)}
-  {props.text && (<p className="card-text">{props.text}</p>)}
-  {props.body}
-  {props.status && (<div id='createStatus'>{props.status}</div>)}
-</div>
-</div> */}
-
-

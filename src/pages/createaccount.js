@@ -12,6 +12,7 @@ function CreateAccount() {
   const [buttonDisabled, setbuttonDisabled] = useState(true);
 
   const ctx = useContext(myContext);
+  // eslint-disable-next-line
   const [currentUser, setCurrentUser] = useState(ctx.currentActive);
 
   function validate(field, label) {
@@ -20,7 +21,7 @@ function CreateAccount() {
       return false;
     }
 
-    if (label == 'password' && field.length < 8) {
+    if (label === 'password' && field.length < 8) {
       setStatus('Error: ' + label + ' must be at least 8 characters long');
       return false;
     }

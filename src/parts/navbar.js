@@ -6,7 +6,7 @@ export function NavBar() {
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#/">
-          <img src="/images/bank-icon.jpg" className="iconImage small" />
+          <img src="/images/bank-icon.jpg" alt="Bank Icon" className="iconImage small" />
           Bad Bank</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

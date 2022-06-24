@@ -1,4 +1,4 @@
-import React, { useContext, UserContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import myContext from '../context/myContext'
 import calculateBalanceForUser from './functions/calculateBalance'
 
